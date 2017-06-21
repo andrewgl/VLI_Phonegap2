@@ -3,31 +3,32 @@ var mainApp = angular.module('mainApp', ['ngRoute', 'ngResource']);
 mainApp.config(function ($routeProvider) {
     $routeProvider
         .when('/title', {
+            // templateUrl: 'title.html',
             templateUrl: 'views/title.html',
             controller: 'MainCtrl'
         })
         .when('/login', {
-            templateUrl: 'login.html',
+            templateUrl: './views/login.html',
             controller: 'MainCtrl'
         })
         .when('/studentdetails', {
-            templateUrl: 'studentdetails.html',
+            templateUrl: './views/studentdetails.html',
             controller: 'StudentCtrl'
         })
         .when('/test1', {
-            templateUrl: 'test1.html',
+            templateUrl: './views/test1.html',
             controller: 'Test1Ctrl'
         })
         .when('/test2', {
-            templateUrl: 'test2.html',
+            templateUrl: './views/test2.html',
             controller: 'Test2Ctrl'
         })
         .when('/review', {
-            templateUrl: 'review.html',
+            templateUrl: './views/review.html',
             controller: 'ReviewCtrl'
         })
         .when('/end', {
-            templateUrl: 'end.html',
+            templateUrl: './views/end.html',
             controller: 'MainCtrl'
         })
         .otherwise({
