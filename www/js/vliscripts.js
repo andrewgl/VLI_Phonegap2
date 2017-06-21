@@ -3,7 +3,7 @@ var mainApp = angular.module('mainApp', ['ngRoute', 'ngResource']);
 mainApp.config(function ($routeProvider) {
     $routeProvider
         .when('/title', {
-            templateUrl: 'title.html',
+            templateUrl: 'views/title.html',
             controller: 'MainCtrl'
         })
         .when('/login', {

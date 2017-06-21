@@ -1,0 +1,115 @@
+<script type="text/ng-template" id="test1.html">
+    <div class="container">
+
+        <div class="item title">Test 1 Letter Chart</div>
+        <div class="flexrow">
+            <div class="eyecontainer">
+                <div class="flexrow">
+                    <div class="flexcol">
+                        <div class="eyetitle">Left eye: line</div>
+                    </div>
+                    <div class="flexcol">
+                        <div class="scorecontainer">
+                            <div ng-repeat="item in results.letter.left.fail">
+                                <div>&nbsp{{item.id}}<br><input type="checkbox" ng-model="item.value"></div>
+                            </div>
+                        </div>
+                        <div class="passfail">Fail</div>
+                    </div>
+                    <div class="flexcol">
+                        <div class="scorecontainer">
+                            <div ng-repeat="item in results.letter.left.pass">
+                                <div>&nbsp{{item.id}}<br><input type="checkbox" ng-model="item.value"></div>
+                            </div>
+                        </div>
+                        <div class="passfail">Pass</div>
+                    </div>
+                </div>
+            </div>
+            <div class="eyecontainer">
+                <div class="flexrow">
+                    <div class="flexcol">
+                        <div class="eyetitle">Right eye: line</div>
+                    </div>
+                    <div class="flexcol">
+                        <div class="scorecontainer">
+                            <div ng-repeat="item in results.letter.right.fail">
+                                <div>&nbsp{{item.id}}<br><input type="checkbox" ng-model="item.value"></div>
+                            </div>
+                        </div>
+                        <div class="passfail">Fail</div>
+                    </div>
+                    <div class="flexcol">
+                        <div class="scorecontainer">
+                            <div ng-repeat="item in results.letter.right.pass">
+                                <div>&nbsp{{item.id}}<br><input type="checkbox" ng-model="item.value"></div>
+                            </div>
+                        </div>
+                        <div class="passfail">Pass</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item title">Test 1 Shape Chart</div>
+        <div class="flexrow">
+            <div class="eyecontainer">
+                <div class="flexrow">
+                    <div class="flexcol">
+                        <div class="eyetitle">Left eye: line</div>
+                    </div>
+                    <div class="flexcol">
+                        <div class="scorecontainer">
+                            <div ng-repeat="item in results.shape.left.fail">
+                                <div>&nbsp{{item.id}}<br><input type="checkbox" ng-model="item.value"></div>
+                            </div>
+                        </div>
+                        <div class="passfail">Fail</div>
+                    </div>
+                    <div class="flexcol">
+                        <div class="scorecontainer">
+                            <div ng-repeat="item in results.shape.left.pass">
+                                <div>&nbsp{{item.id}}<br><input type="checkbox" ng-model="item.value"></div>
+                            </div>
+                        </div>
+                        <div class="passfail">Pass</div>
+                    </div>
+                </div>
+            </div>
+            <div class="eyecontainer">
+                <div class="flexrow">
+                    <div class="flexcol">
+                        <div class="eyetitle">Right eye: line</div>
+                    </div>
+                    <div class="flexcol">
+                        <div class="scorecontainer">
+                            <div ng-repeat="item in results.shape.right.fail">
+                                <div>&nbsp{{item.id}}<br><input type="checkbox" ng-model="item.value"></div>
+                            </div>
+                        </div>
+                        <div class="passfail">Fail</div>
+                    </div>
+                    <div class="flexcol">
+                        <div class="scorecontainer">
+                            <div ng-repeat="item in results.shape.right.pass">
+                                <div>&nbsp{{item.id}}<br><input type="checkbox" ng-model="item.value"></div>
+                            </div>
+                        </div>
+                        <div class="passfail">Pass</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="page test"><b> Test 1 </b><br><br>
+        <button ng-click="go('/test2')">Save and Continue</button>
+    </div>
+
+    Results: <br>
+    <pre>{{results | json}}</pre><br><br>
+    saveddata: <br>
+    <pre>{{allresults | json}}</pre><br><br>
+
+
+</script>

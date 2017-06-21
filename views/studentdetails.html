@@ -1,0 +1,31 @@
+<script type="text/ng-template" id="studentdetails.html">
+
+    <div class="container">
+
+        <div class="item title">Student Details</div>
+        <div class="flexrow">
+            Students name: <input type="text" id="name" placeholder="...enter students name" ng-model="results.name"
+                                  required>
+        </div>
+        <div class="flexrow">
+            Students Id: <input type="text" id="s_id" placeholder="...enter students id" ng-model="results.id" required>
+        </div>
+        <div class="flexrow">
+            Students age: <input type="text" id="age" placeholder="...enter students age" ng-model="results.age"
+                                 required>
+        </div>
+        <div class="flexrow">
+            StudentsoOther: <input type="text" id="other" placeholder="...enter something else" ng-model="results.other"
+                                   required>
+        </div>
+    </div>
+
+    <div class="page studentdetails"><b> Student Details </b><br><br>
+        <button ng-click="go('/test1')"> Save and start test</button>
+    </div>
+
+    Results: <br>
+    <pre>{{results | json}}</pre><br><br>
+    saveddata: <br>
+    <pre>{{allresults | json}}</pre><br><br>
+</script>
